@@ -1,0 +1,8 @@
+production:
+  password: da28bb683fa9961c3090772e2df3bf75
+  theme_id: "6540361755"
+  store: dear-katie-brown.myshopify.com
+development:
+  password: 0620b1632ddc836ad0a5cc452ea0a3a6
+  theme_id: "11463262274"
+  store: testdkb.myshopify.com
