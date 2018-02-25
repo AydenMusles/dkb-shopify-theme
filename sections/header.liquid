@@ -19,32 +19,16 @@
   <header class="main-header">
     <div class="header--bg"></div>
     <div class="row top">
-      {% if settings.show_multiple_currencies and section.settings.header-logo-center %}
-        <div class="currency-selector columns left-aligned">
-          {% include 'snippet-currency-selector' %}
-        </div>
-      {% endif %}
-
-      <div class="columns{% if section.settings.header-logo-center %} logo-center{% endif %}">
+      <div class="columns store-title">
         {% include 'snippet-store-title' %}
       </div>
 
-      <div class="search-account columns">
-        {% include 'snippet-searchbar-account' %}
-      </div>
-
-    </div><!-- .row -->
-
-    <div class="bottom-row">
-      <div class="row {% if section.settings.header-menu-center %} text-center{% endif %}">
+      <div class="columns nav-menu">
 
       {% if linklists[section.settings.menu].links.size > 0 %}
         {% assign header_nav = section.settings.menu %}
 
-        {% assign menu_alignment = 'left' %}
-        {% if section.settings.header-menu-center %}
-          {% assign menu_alignment = 'center' %}
-        {% endif %}
+        {% assign menu_alignment = 'center' %}
 
         {%
           include 'framework--x-menu',
@@ -55,12 +39,11 @@
 
       {% endif %}
 
-        <div class="columns cart-container">
-          {% include 'snippet-cart' %}
-        </div>
       </div>
-
-    </div>
+        <div class="columns search-account">
+          {% include 'snippet-searchbar-account' %}
+        </div>
+    </div><!-- .row -->
 
     <div class="header--mobile">
       <div class="off-canvas--open" data-off-canvas--open="left-sidebar">
@@ -119,11 +102,6 @@
       "label": "Enable customer account links",
       "default": true,
       "info": "[You will also need to enable customer accounts in your store settings](http:\/\/docs.shopify.com\/manual\/your-store\/customers\/customer-accounts)"
-    },
-    {
-      "type": "checkbox",
-      "id": "header-menu-center",
-      "label": "Center align menu"
     },
     {
       "type": "header",

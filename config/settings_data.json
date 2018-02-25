@@ -86,10 +86,9 @@
           "menu": "main-menu",
           "header-search-show": true,
           "header-account-show": true,
-          "header-menu-center": true,
           "header-logo-center": false,
-          "logo": "shopify:\/\/shop_images\/logo_with_heart_to_left.png",
-          "logo-height": 65,
+          "logo": "shopify:\/\/shop_images\/logo_with_larger_heart_behind.png",
+          "logo-height": 40,
           "header--promo-bar--show-on": "all",
           "header--promo-bar--text": "Feb 1-28th use code Love to get 10% off all Pressed Glitter Singles!",
           "header--promo-bar--link": "shopify:\/\/collections\/pressed-glitter-singles"
@@ -214,8 +213,8 @@
       "1514682754240": {
         "type": "featured-collection",
         "settings": {
-          "home-product-slider-collection": "",
-          "max_products": 16
+          "home-product-slider-collection": "featured",
+          "max_products": 4
         }
       },
       "1514683676987": {
@@ -382,7 +381,6 @@
             "menu": "main-menu",
             "header-search-show": true,
             "header-account-show": true,
-            "header-menu-center": false,
             "header-logo-center": false,
             "logo": "shopify:\/\/shop_images\/logo_86b11121-724f-49b2-9a14-4378ccc1bc7e.png",
             "logo-height": 50,
