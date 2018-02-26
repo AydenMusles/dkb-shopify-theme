@@ -2133,6 +2133,7 @@ html.modal-open {
 
 .x-menu {
   display: inline-block;
+  min-height: 55px
 }
 
 .x-menu ul,
@@ -2145,12 +2146,7 @@ html.modal-open {
 .x-menu li {
   opacity: 0.9;
 }
-{% comment %}
-.x-menu li:hover {
-  color: {{ settings.color-header-bg }};
-  background: {{ settings.color-header }};
-}
-{% endcomment %}
+
 .x-menu a:focus {
   outline: thin dotted;
 }
@@ -2177,6 +2173,7 @@ html.modal-open {
 
 .x-menu--level-1--link {
   display: inline-block;
+  min-height: 55px;
 }
 
 .x-menu--level-1--link[data-x-menu--depth="2"] {
@@ -2188,6 +2185,7 @@ html.modal-open {
   padding: 15px;
   z-index: 5;
   position: relative;
+  min-height: 55px;
 }
 
 .x-menu--level-1--link .fw--icon--expand-more {
@@ -6488,6 +6486,7 @@ html, body {
   z-index: 3;
   width: 100%;
   font-family: {{ settings.font-nav | remove_first: "google, " }};
+  box-shadow: 0px 2px 5px;
 }
 
 .main-header .search-account .fw--icon,
@@ -6541,21 +6540,58 @@ html, body {
   opacity: 1 !important;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .main-header .header--bg {
     display: none;
   }
 }
 
-.main-header .top.row {
-  padding-top: 0px;
-  padding-bottom: 0px;
+.main-header .header-row {
+  padding: 0px 20px;
   background: transparent;
-  min-height: 50px;
+  min-height: 55px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-size: 14px;
 }
 
-@media only screen and (max-width: 767px) {
-  .main-header .top.row {
+@media only screen and (max-width: 1075px) {
+  .main-header .header-row {
+    font-size: 13px;
+  }
+  .x-menu--level-1--link > a {
+    padding: 15px 10px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .main-header .header-row {
+    font-size: 12px;
+  }
+  .x-menu--level-1--link > a {
+    padding: 15px 6px;
+  }
+}
+
+@media only screen and (max-width: 915px) {
+  .main-header .header-row {
+    font-size: 10px;
+  }
+  .x-menu--level-1--link > a {
+    padding: 15px 2px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main-header .header-row {
     display: none;
   }
 }
@@ -6571,15 +6607,32 @@ html, body {
   background: transparent;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .main-header .bottom-row {
     display: none;
   }
 }
 
+.main-header form.currency {
+  display: inline-block;
+  position: relative;
+  margin: 0px;
+}
+
+.main-header form.currency select {
+  margin: 0px;
+  padding: 6px 20px 6px 10px;
+}
+
 .main-header .nav-menu {
   text-align: center !important;
-  font-size: 16px;
+  display: none
+}
+
+@media only screen and (min-width: 769px) {
+  .main-header .nav-menu{
+    display: block;
+  }
 }
 
 .main-header .bottom-row .cart-container {
@@ -6691,15 +6744,13 @@ html, body {
   color: {{ settings.color-header }};
   display: inline-block;
   bottom: 5px;
-  left: 0;
 }
 
 .main-header .store-title {
+  vertical-align: middle;
+  position: relative;
   display: none;
   color: {{ settings.color-header }};
-  position: absolute;
-  left: 20px;
-  width: auto;
 }
 
 @media only screen and (min-width: 768px) {
@@ -6712,12 +6763,13 @@ html, body {
   display: block;
 }
 
+.main-header .store-title img {
+  vertical-align: middle;
+}
+
 .main-header .search-account {
   display: none;
   color: {{ settings.color-header }};
-  position: absolute;
-  right: 20px;
-  width: auto;
 }
 
 @media only screen and (min-width: 768px) {
@@ -6745,12 +6797,12 @@ html, body {
 }
 
 .main-header .search-account .menu {
-  margin-top: 7px;
+  display: inline-block;
+  padding: 11px 0px;
 }
 
 .main-header .search-account .menu .searchbar-open {
   display: inline-block;
-  position: relative;
   margin-left: 5px;
 }
 
@@ -6768,14 +6820,13 @@ html, body {
 
 .main-header .search-account .menu .account-open {
   display: inline-block;
-  position: relative;
   margin-left: 4px;
 }
 
 .main-header .search-account .searchbar-container {
   display: none;
   width: 100%;
-  top: 0;
+  top: 11px;
   max-width: 250px;
 }
 
@@ -6806,7 +6857,7 @@ html, body {
 
 .main-header .search-account .account-container {
   display: none;
-  top: 6px;
+  top: 17px;
   right: -3px;
   padding: 0;
   width: 100%;
@@ -7044,7 +7095,7 @@ html, body {
   padding: 20px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   .header--mobile {
     display: none;
   }
@@ -9253,7 +9304,6 @@ html, body {
 }
 
 .template-collection .main-content header .tag-filter form.custom {
-  display: inline-block;
   vertical-align: top;
   margin: -4px 0 0 0;
 }

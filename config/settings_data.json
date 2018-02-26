@@ -88,7 +88,7 @@
           "header-account-show": true,
           "header-logo-center": false,
           "logo": "shopify:\/\/shop_images\/logo_with_larger_heart_behind.png",
-          "logo-height": 40,
+          "logo-height": 50,
           "header--promo-bar--show-on": "all",
           "header--promo-bar--text": "Feb 1-28th use code Love to get 10% off all Pressed Glitter Singles!",
           "header--promo-bar--link": "shopify:\/\/collections\/pressed-glitter-singles"
