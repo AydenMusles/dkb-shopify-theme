@@ -213,7 +213,7 @@
       "1514682754240": {
         "type": "featured-collection",
         "settings": {
-          "home-product-slider-collection": "featured",
+          "home-product-slider-collection": "new",
           "max_products": 4
         }
       },
